@@ -5,3 +5,8 @@ resources/
 
 # Editor
 .vscode/
+
+# macOS Finder and vi swap files
+.DS_Store
+*.icloud
+*.swp
