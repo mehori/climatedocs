@@ -1,6 +1,9 @@
 # Hugo configuration file
 title: mehori's Climate Research Docs
 
+hasCJKLanguage: true
+defaultContentLanguage: ja
+
 # import hextra as module
 module:
   imports:
@@ -11,15 +14,23 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ["$$", "$$"]]
+          inline: [['\(', '\)']]
+        enable: true
 
   # enable hextra syntax highlight
   highlight:
     noClasses: false
 
+enableInlineShortcodes: true
+
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
+    - name: Programs
+      pageRef: /programs
       weight: 1
     - name: About
       pageRef: /about
@@ -37,7 +48,8 @@ menu:
 params:
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
+    width: normal
 
   footer:
     displayCopyright: true

@@ -1,6 +1,8 @@
 ---
-title: My Site
-toc: false
+title: プログラム置き場
+type: docs
+toc: true
+breadcrumbs: false
 ---
 
 This is the landing page.
